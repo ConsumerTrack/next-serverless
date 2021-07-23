@@ -50,7 +50,7 @@ references:
       name: Install local dependencies
       command: npm ci
       working_directory: /tmp/app
-  buil: &buil
+  build: &build
     run:
       name: Build library
       command: npm run prebuild && npm run build
