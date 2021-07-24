@@ -53,7 +53,7 @@ references:
   build: &build
     run:
       name: Build library
-      command: npm run prebuild && npm run build
+      command: npm run prebuild && npm run build && mv lib/next/* lib
       working_directory: /tmp/app
   get_package_version: &get_package_version
     run:
