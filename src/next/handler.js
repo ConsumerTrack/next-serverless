@@ -10,7 +10,7 @@ let requestHandler;
  * @param {function} handler - Request handler
  */
 export const lambdaRequestHandler = (app, handler) => {
-  const serverlessHandler = serverless(handler);
+  const serverlessHandler = serverless(handler, { requestId: 'x-amz-cf-id' });
   const pathPrefixes = [''];
 
   return (event, context, ...params) => {
